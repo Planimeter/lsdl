@@ -3,7 +3,7 @@ LuaJIT FFI bindings to SDL 2.0
 
 ## Install
 
-### Generate `SDL.h` [1]
+### Generate `SDL.h` [[1]](https://github.com/Planimeter/lsdl#references)
 
 ```bash
 echo "#include <SDL.h>" > lsdl.c
