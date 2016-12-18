@@ -7,4 +7,4 @@
 local ffi = require( "ffi" )
 io.input( "SDL.h" )
 ffi.cdef( io.read( "*all" ) )
-return ffi.load( "SDL" )
+return ffi.load( "SDL2" )
