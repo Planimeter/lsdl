@@ -12,12 +12,12 @@ local ffi = require( "ffi" )
 
 local window;                          -- Declare a pointer
 
-SDL_INIT_VIDEO = 0x00000020;
+SDL_INIT_VIDEO = 0x00000020
 SDL.SDL_Init(SDL_INIT_VIDEO);          -- Initialize SDL2
 
 -- Create an application window with the following settings:
-SDL_WINDOWPOS_UNDEFINED = 0x1FFF0000;
-SDL_WINDOW_OPENGL = 0x00000002;
+SDL_WINDOWPOS_UNDEFINED = 0x1FFF0000
+SDL_WINDOW_OPENGL = 0x00000002
 window = SDL.SDL_CreateWindow(
     "An SDL2 window",                  -- window title
     SDL_WINDOWPOS_UNDEFINED,           -- initial x position
