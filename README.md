@@ -1,7 +1,7 @@
 # lsdl
 LuaJIT FFI bindings to SDL 2.0
 
-## Install
+## Update
 
 ### Generate `SDL.h` [[1]](https://github.com/Planimeter/lsdl#references)
 
