@@ -401,10 +401,10 @@ typedef struct __sFILE {
 
 
  void *_cookie;
- int (* _Nullable _close)(void *);
- int (* _Nullable _read) (void *, char *, int);
- fpos_t (* _Nullable _seek) (void *, fpos_t, int);
- int (* _Nullable _write)(void *, const char *, int);
+ // int (* _Nullable _close)(void *);
+ // int (* _Nullable _read) (void *, char *, int);
+ // fpos_t (* _Nullable _seek) (void *, fpos_t, int);
+ // int (* _Nullable _write)(void *, const char *, int);
 
 
  struct __sbuf _ub;
@@ -1311,8 +1311,8 @@ long atol(const char *);
 long long
   atoll(const char *);
 
-void *bsearch(const void *__key, const void *__base, size_t __nel,
-     size_t __width, int (* _Nonnull __compar)(const void *, const void *));
+// void *bsearch(const void *__key, const void *__base, size_t __nel,
+//      size_t __width, int (* _Nonnull __compar)(const void *, const void *));
 void *calloc(size_t __count, size_t __size) __attribute__((__warn_unused_result__));
 div_t div(int, int) __attribute__((const));
 void exit(int) __attribute__((noreturn));
@@ -1330,8 +1330,8 @@ int mblen(const char *__s, size_t __n);
 size_t mbstowcs(wchar_t * restrict , const char * restrict, size_t);
 int mbtowc(wchar_t * restrict, const char * restrict, size_t);
 int posix_memalign(void **__memptr, size_t __alignment, size_t __size) __attribute__((availability(macosx,introduced=10.6)));
-void qsort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *));
+// void qsort(void *__base, size_t __nel, size_t __width,
+//      int (* _Nonnull __compar)(const void *, const void *));
 int rand(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
 void *realloc(void *__ptr, size_t __size) __attribute__((__warn_unused_result__));
 void srand(unsigned) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
@@ -1421,9 +1421,9 @@ void arc4random_stir(void);
 uint32_t
   arc4random_uniform(uint32_t __upper_bound) __attribute__((availability(macosx,introduced=10.7)));
 
-int atexit_b(void (^ _Nonnull)(void)) __attribute__((availability(macosx,introduced=10.6)));
-void *bsearch_b(const void *__key, const void *__base, size_t __nel,
-     size_t __width, int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// int atexit_b(void (^ _Nonnull)(void)) __attribute__((availability(macosx,introduced=10.6)));
+// void *bsearch_b(const void *__key, const void *__base, size_t __nel,
+//      size_t __width, int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
 
 
@@ -1446,32 +1446,32 @@ int getloadavg(double [], int);
 const char
  *getprogname(void);
 
-int heapsort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *));
+// int heapsort(void *__base, size_t __nel, size_t __width,
+//      int (* _Nonnull __compar)(const void *, const void *));
 
-int heapsort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// int heapsort_b(void *__base, size_t __nel, size_t __width,
+//      int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-int mergesort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *));
+// int mergesort(void *__base, size_t __nel, size_t __width,
+//      int (* _Nonnull __compar)(const void *, const void *));
 
-int mergesort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// int mergesort_b(void *__base, size_t __nel, size_t __width,
+//      int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void psort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// void psort(void *__base, size_t __nel, size_t __width,
+//      int (* _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void psort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// void psort_b(void *__base, size_t __nel, size_t __width,
+//      int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void psort_r(void *__base, size_t __nel, size_t __width, void *,
-     int (* _Nonnull __compar)(void *, const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// void psort_r(void *__base, size_t __nel, size_t __width, void *,
+//      int (* _Nonnull __compar)(void *, const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void qsort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+// void qsort_b(void *__base, size_t __nel, size_t __width,
+//      int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void qsort_r(void *__base, size_t __nel, size_t __width, void *,
-     int (* _Nonnull __compar)(void *, const void *, const void *));
+// void qsort_r(void *__base, size_t __nel, size_t __width, void *,
+//      int (* _Nonnull __compar)(void *, const void *, const void *));
 int radixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
      unsigned __endbyte);
 void setprogname(const char *);
@@ -9456,10 +9456,3 @@ extern __attribute__ ((visibility("default"))) Uint32 SDL_WasInit(Uint32 flags);
 
 
 extern __attribute__ ((visibility("default"))) void SDL_Quit(void);
-
-
-
-
-
-
-
