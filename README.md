@@ -1,6 +1,19 @@
 # lsdl
 LuaJIT FFI bindings to SDL 2.0
 
+## Install
+
+### Generate `SDL.h` [1]
+
+```bash
+echo "#include <SDL.h>" > lsdl.c
+gcc -I /usr/local/include/SDL2 -E lsdl.c | grep -v "^#" > SDL.h
+```
+
+## References
+
+1. https://gist.github.com/creationix/1213280
+
 ## License
 
 The MIT License
