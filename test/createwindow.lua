@@ -11,12 +11,12 @@ local SDL = require( "../sdl" )
 
 local window;                          -- Declare a pointer
 
-SDL_INIT_VIDEO = 0x00000020;
+SDL_INIT_VIDEO = 0x00000020
 SDL.SDL_Init(SDL_INIT_VIDEO);          -- Initialize SDL2
 
 -- Create an application window with the following settings:
-SDL_WINDOWPOS_UNDEFINED = 0x1FFF0000;
-SDL_WINDOW_OPENGL = 0x00000002;
+SDL_WINDOWPOS_UNDEFINED = 0x1FFF0000
+SDL_WINDOW_OPENGL = 0x00000002
 window = SDL.SDL_CreateWindow(
     "An SDL2 window",                  -- window title
     SDL_WINDOWPOS_UNDEFINED,           -- initial x position
@@ -29,7 +29,7 @@ window = SDL.SDL_CreateWindow(
 -- Check that the window was successfully created
 if (window == nil) then
     -- In the case that the window could not be made...
-    print("Could not create window: " .. ffi.string(SDL.SDL_GetError()));
+    print("Could not create window: " .. ffi.string( SDL.SDL_GetError() ));
     os.exit(1);
 end
 
