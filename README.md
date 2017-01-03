@@ -1,5 +1,5 @@
 # lsdl
-LuaJIT FFI bindings to SDL 2.0
+LuaJIT FFI bindings for SDL 2.0
 
 ## Update
 
