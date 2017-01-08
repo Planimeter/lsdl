@@ -2,28 +2,22 @@
 LuaJIT FFI bindings for SDL 2.0
 
 ## Install
-
 ### macOS
-
 ```bash
 brew install sdl2
 ```
 
 ## Update
-
 ### Generate `SDL.h` [[1]](https://github.com/Planimeter/lsdl#references)
-
 ```bash
 echo "#include <SDL.h>" > lsdl.c
 gcc -I /usr/local/include/SDL2 -E lsdl.c | grep -v "^#" > SDL.h
 ```
 
 ## References
-
 1. https://gist.github.com/creationix/1213280
 
 ## License
-
 The MIT License
 
 Copyright (c) 2017 Planimeter. http://planimeter.org
