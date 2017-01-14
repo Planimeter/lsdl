@@ -32,7 +32,7 @@ if (window == nil) then
 end
 
 while (1) do
-    local event = SDL.SDL_Event();
+    local event = ffi.new( "SDL_Event" );
     while (SDL.SDL_PollEvent(event)) do
         --[[ handle your event here ]]
     end
